@@ -30,7 +30,7 @@ import org.junit.Test;
  * @author Harry
  *
  */
-public class TestFunc {
+public class FuncTest {
 	@Test
 	public void httpClient() throws ClientProtocolException, IOException{
 		HttpClient client = new DefaultHttpClient();
