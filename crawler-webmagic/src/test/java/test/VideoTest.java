@@ -1,5 +1,6 @@
 package test;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.jsoup.Jsoup;
@@ -8,6 +9,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.junit.Test;
+
+import harry.util.FileUtil;
 
 /**
  * 
@@ -39,7 +42,7 @@ public class VideoTest {
 						Elements postEelements = postElement.select(".post");
 						for (Element e1 : postEelements) {
 							url = e1.select("a").attr("href");
-							System.out.println(url);
+							FileUtil.append(new File("video.txt"), url);
 						}
 					}
 				}
